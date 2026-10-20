@@ -6,8 +6,11 @@ public class VentasSucursal {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
 
+        System.out.println("Ingresa la cantidad de ventas (n):");
         if (!scanner.hasNextInt()) return;
         int n = scanner.nextInt();
+
+        System.out.println("Ingresa " + n + " líneas con el formato: sucursal importe (ejemplo: Managua 100)");
 
         // Mapa para acumular las ventas por sucursal
         Map<String, Long> ventas = new HashMap<>();
@@ -36,6 +39,7 @@ public class VentasSucursal {
         }
 
         // Imprimir el resultado esperado: "Nombre Total"
+        System.out.println("Sucursal ganadora:");
         System.out.println(sucursalGanadora + " " + maxVentas);
 
         scanner.close();
